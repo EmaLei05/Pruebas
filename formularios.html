@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de formulario</title>
+</head>
+<body>
+    <h1>Enlaces</h1>
+
+    <nav>
+        <ul>
+            <li><a href="./semantica.html">Ir a semantica</a></li>
+            <li><a href="./listas.html">Ir a formularios</a></li>
+            <li><a href="./index.html">Ir a index</a></li>
+            <li><a href="./tablas.html">Ir a tablas</a></li>
+            <li><a href="https://google.com">Google</a></li>
+        </ul>
+    </nav>
+
+    <h1>Fieldset y legend</h1>
+
+    <form><!--Define formalmente un formulario y los atributos que determinan el comportamiento del formulario-->
+        <fieldset><!--Crea grupos de controles de formulario que comporten el mismo proposito-->
+            <legend>Info de contacto</legend><!--Con este elemento se le pone un nombre a esta agrupacion-->
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Apellido">
+            <input type="number" placeholder="Edad">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Info Basica</legend>
+            <input type="email" placeholder="Email">
+            <input type="number" placeholder="Telefono">
+        </fieldset>
+    </form>
+
+    <h1>Textarea y label</h1>
+
+    <form>
+
+        <div>
+            <label for="nombre">Texto: </label><!--representa una etiqueta para un elemento en una interfaz de usuario o es utilizada para asociar una descripción con un elemento de formulario específico-->
+            <input type="text" id="nombre" placeholder="Nombre Completo">
+        </div>
+
+        <div>
+            <label for="emailcs">Email: </label>
+            <input type="email" id="emailcs" placeholder="Email">
+        </div>
+       
+        <div>
+            <textarea placeholder=""></textarea><!--permite crear un cuadro de texto de varias líneas en una página web-->
+        </div>
+
+        <!--Se puede conectar label con elementos-->
+        
+        <div>
+            <label for="ejemplo">Texto: </label>
+            <input type="email" placeholder="Email" id="ejemplo"><!--Estos id enlaces los for de los label-->
+        </div>
+
+    </form>
+
+    <h1>Select, option y datalist</h1>
+    
+    <form>
+
+        <fieldset>
+            <legend>Select</legend>
+            <select name="type-of-user" id="tipo"> <!--Nos permite elegir entre varias opciones-->
+                <option value="user1">Opcion 1</option> <!--Estas es una opcion definida-->
+                <option value="user2">Opcion 2</option>
+                <option value="user3">Opcion 3</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datalist</legend>
+            <input list="browsers" name="myBrowser"/> <!--el atributo list hara que se conecto con el elemento datalist-->
+            <datalist id="browsers"> <!--Define una lista de opciones predifinidas para el campo de entrada anterior-->
+                <option value="user1">Opcion 1</option>
+                <option value="user2">Opcion 2</option>
+                <option value="user3">Opcion 3</option>
+            </datalist>
+        </fieldset>
+    </form>
+
+</body>
+</html>
